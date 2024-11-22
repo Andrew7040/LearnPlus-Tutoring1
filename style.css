@@ -1,41 +1,300 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*  Body Styling */
 body {
-    font-family: Arial, sans-serif;  /* creeates the font for the whole website */
-    margin: 0;  /* Removes the default margin */
-    padding: 0; /* Removes the default padding */
-    background-color: #f1efef;  /* Sets a light gray background */
+    font-family: 'Roboto'
+    line-height: 1.6;
+    color: #000; 
+    background-color: #f9f9fb;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
 header {
-    background-color: #333;  /* Darker behind the header */
-    color: white;  /* White text color */
-    padding: 10px 0;  /* Adds space in the header */
-    text-align: center;  /* Centers the header */
+    background-color: #ff8fb1; 
+    color: #000; 
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-nav ul {
-    list-style-type: none;  /* Removes bullet points on the list */
-    padding: 0;  /* Removes padding in the list */
+header h1 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 10px;
 }
 
-nav ul li {
-    display: inline;  /* Aligns list horizontally */
-    margin: 0 15px;  /* Adds space between the list  */
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
 
-nav ul li a {
-    color: #333;  /* creates color for links */
-    text-decoration: none;  /* Removes links underline */
+header nav ul li {
+    display: inline;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;  /* makes underline when mouse touches links */
+header nav ul li a {
+    text-decoration: none;
+    color: #000; 
+    font-weight: 500;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
 }
 
+header nav ul li a.active, 
+header nav ul li a:hover {
+    background-color: #ff5f7f; 
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #ff8fb1; 
+    color: #000; 
+    padding: 50px 0;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero .cta-button {
+    display: inline-block;
+    background-color: #ff5f7f; 
+    color: #000;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hero .cta-button:hover {
+    background-color: #e94d61;
+}
+
+/* Features Section */
+.features {
+    padding: 50px 0;
+    background-color: #f1f1f1;
+}
+
+.features h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #000; 
+}
+
+.features .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.feature {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.feature h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #000; 
+}
+
+.feature p {
+    font-size: 1rem;
+    color: #000; 
+}
+
+/* Tutor Profiles Section */
+.tutor-profiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 2rem;
+}
+
+.tutor-profile {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tutor-profile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.tutor-profile img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.tutor-profile h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0 0.5rem;
+    color: #1e90ff;
+}
+
+.tutor-profile p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0 1rem 1rem;
+}
+
+/* Footer */
 footer {
-    text-align: center;  /* Centers footer text */
-    padding: 10px 0;  /* Adds padding to the footer */
-    background-color: #333;  /* Darker background behind the footer */
-    color: white;  /* White text color for the footer */
-    position: relative;  /* Alines the footes realtive to text */
+    background-color: #ff8fb1; 
+    color: #000; 
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
 }
+
+footer a {
+    color: #000; 
+    text-decoration: none;
+    font-weight: 500;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Forms */
+form {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 30px auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #000; 
+}
+
+form input[type="text"], 
+form input[type="email"], 
+form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+    background-color: #ff5f7f; 
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #e94d61; 
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+}
+
+table th, 
+table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #ff8fb1;
+    color: #000; 
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9fb;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .features .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tutor-profiles {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .tutor-profile {
+        width: 90%;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+} 
 
