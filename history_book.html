@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>LearnPlus Tutoring</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="history.html" class="active">History</a></li>
+                <li><a href="math.html">Math</a></li>
+                <li><a href="science.html">Science</a></li>
+                <li><a href="english_literature.html">English Literature</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Book History Tutor</h2>
+    </section>
+
+    <section>
+        <h1>Select your Tutor</h1>
+    <form>
+        <label for="history">John Doe:</label>
+        
+        <select id="subjects" name="subjects">
+            <option value="none">None</option>
+            <option value="world history">World History</option>
+            <option value="human geography">Human Geography</option>
+            <option value="cultural geography">Cultural Geography</option>
+            <option value="modern world history">Modern World History</option>
+        </select>
+        <br><br>
+        <label for="date">Choose date:</label>
+        <input type="date" id="date" name="date" required>
+        <br><br>
+
+        <label for="time">Choose time:</label>
+        <input type="time" id="time" name="time" required>
+        <br><br>
+        <a href="scheduled.html" class="cta-button">Submit</a>
+
+    </form>
+
+    <form>
+        <label for="history">Jane Smith:</label>
+        
+        <select id="subjects" name="subjects">
+            <option value="none">None</option>
+            <option value="ancient-civilization">Ancient Civilization</option>
+            <option value="government">Government</option>
+            <option value="us-history">US History</option>
+            <option value="dc-history">DC History</option>
+        </select>
+        <br><br>
+        <label for="date">Choose date:</label>
+        <input type="date" id="date" name="date" required>
+        <br><br>
+
+        <label for="time">Choose time:</label>
+        <input type="time" id="time" name="time" required>
+        <br><br>
+        <a href="scheduled.html" class="cta-button">Submit</a>
+    </form>
+    </section>
+    <footer>
+        <p>&copy; 2024 LearnPlus Tutoring</p>
+    </footer>
+</body>
+</html>
